@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card</title>
+    <link rel="shortcut icon" href="meu_favi/massucatti_tatu.ico"/>
+    <link rel="stylesheet" href="./style.css">
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="imgBx">
+            <img src="c.png" alt="Nike Jordan Proto-Lyte Image">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Espumante 130 Brut Blanc De Noir<br>
+                    <span>Catad’Or World Wine Awards </span>
+                </h2>
+                <p>
+                    O bouquet mostra-se autêntico e complexo, com notas de amora e framboesa em perfeita harmonia com as nuances de frutas secas e o delicado toque de flores escuras. A intensidade da Pinot Noir resulta em um espumante potente, com excelente cremosidade e frescor.
+                </p>
+                <p class="product-colors">Tipos Desponiveis:
+                    <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="c.png"></span>
+                    <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="c.png"></span>
+                    <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="c.png"></span>
+                </p>
+                <h3>R$ 175.00</h3>
+                <button>Comprar Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://github.com/EduardoMCastro?tab=repositories" target="_blank">eduardo.massucatti.castro@gmail.com</a>
+    </footer>
+
+
+    <script>
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active");
+            $(this).addClass("active");
+            $(".active").css("border-color", $(this).attr("data-color-sec"))
+            $("body").css("background", $(this).attr("data-color-primary"));
+            $(".content h2").css("color", $(this).attr("data-color-sec"));
+            $(".content h3").css("color", $(this).attr("data-color-sec"));
+            $(".container .imgBx").css("background", $(this).attr("data-color-sec"));
+            $(".container .details button").css("background", $(this).attr("data-color-sec"));
+            $(".imgBx img").attr('src', $(this).attr("data-pic"));
+        });
+    </script>
+
+</body>
+
+</html>
+  
+</body>
+</html>
